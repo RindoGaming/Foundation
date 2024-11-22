@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/mystyles.css">
+    <link rel="shortcut icon" href="bit_beats_logo_small.png" type="image/x-icon">
+    <title>My Dashboard</title>
+</head>
+
+<body>
+    <div class="title-bar topbar-center-logo-mobile" data-responsive-toggle="topbar-center-logo" data-hide-for="medium">
+        <div class="title-bar-left">
+            <div class="title-bar-title"><img class="smaller" src="bit_beats_logo_small.png" alt="logo" /></div>
+        </div>
+        <div class="title-bar-right">
+            <button class="menu-icon" type="button" data-toggle="topbar-center-logo"></button>
+        </div>
+    </div>
+    <div class="top-bar topbar-center-logo" id="topbar-center-logo">
+        <div class="top-bar-left">
+            <ul class="menu vertical medium-horizontal">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="index.html">Dashboard</a></li>
+            </ul>
+        </div>
+        <div class="top-bar-center">
+            <a href="Home.html"><img class="smaller" src="bit_beats_logo_small.png" alt="logo" /></a>
+        </div>
+        <div class="top-bar-right">
+            <ul class="menu vertical medium-horizontal">
+                <li><a href="Settings.html">Settings</a></li>
+                <li><a href="Account.html">My Account</a></li>
+            </ul>
+        </div>
+    </div>
+    <main class="grid-container">
+        <section class="grid-x grid-margin-x">
+            <div class="cell small-12 medium-6 large-4">
+                <div class="card-user-container dinges">
+                    <div class="card-user-avatar">
+                        <a href="Account.html"><img src="pfp.png" alt="me :D" class="user-image"></a>
+                    </div>
+                    <div class="card-user-bio">
+                        <h4>V_Riety</h4>
+                        <p>UX/UI ,Front-end developer, Silly guy. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="cell small-12 medium-6 large-4">
+                <div class="card rounding dinges">
+                    <div class="card-divider">
+                        <h4>Welcome back V_Riety</h4>
+                    </div>
+                    <img class="hello" src="Fella.gif" alt="greetings">
+                    <div class="card-section">
+                        <p>Here are the details of the music you have been listening to.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cell small-12 medium-6 large-4">
+                <div class="card rounding dinges">
+                    <div class="card-divider">
+                        <h5>Enter info about a song here.</h5>
+                    </div>
+                    <div class="card-section">
+                        <ul class="bulletless">
+                            <li>Song name</li>
+                            <li><input type="text" name="song" id="song" placeholder="Song name"></li>
+                            <li>Artist name</li>
+                            <li><input type="text" name="artist" id="artist" placeholder="Artist name"></li>
+                            <li>Album cover</li>
+                            <li>
+                                <input class="nonexistant" type="file" name="uploadfile" id="img" accept="image/*"/>
+                                <label class="button cover" for="img">Click me to upload image</label>
+                            </li>
+                            <li>Extra info</li>
+                            <li><textarea name="extra" id="extra" cols="30" rows="1"></textarea></li>
+                            <li><input class="submit success button" type="submit" value="Submit"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="cell small-12 medium-6 large-12">
+                <ul class="bar-graph">
+                    <li class="bar-graph-axis">
+                        <div class="bar-graph-label">100%</div>
+                        <div class="bar-graph-label">80%</div>
+                        <div class="bar-graph-label">60%</div>
+                        <div class="bar-graph-label">40%</div>
+                        <div class="bar-graph-label">20%</div>
+                        <div class="bar-graph-label">0%</div>
+                    </li>
+                    <li class="bar alert darkbar" style="height: 44%;" title="44">
+                        <div class="description">Energetic 44%</div>
+                    </li>
+                    <li class="bar primary" style="height: 29%;" title="29">
+                        <div class="description">Dramatic 29%</div>
+                    </li>
+                    <li class="bar warning" style="height: 20%;" title="20">
+                        <div class="description">Sad 20%</div>
+                    </li>
+                    <li class="bar secondary" style="height: 2%;" title="2">
+
+                        <div class="description">Swing 2%</div>
+                    </li>
+                    <li class="bar success" style="height: 2%;" title="2">
+
+                        <div class="description">Happy 2%</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="cell small-12 medium-6 large-4">
+                <div class="card rounding artistmusic">
+                    <div class="card-divider">
+                        <h5>Heres a top 5 of your most played music</h5>
+                    </div>
+                    <div class="card-section">
+                        <ol>
+                            <li>
+                                <p class="albumtext">Sound Chimera</p>
+                                <img class="album" src="soundchimera.jpg" alt="Sound Chimera">
+                            </li>
+                            <li>
+                                <p class="albumtext">シカ色デイズ</p>
+                                <img class="album" src="shikanoko.jpg" alt="シカ色デイズ">
+                            </li>
+                            <li>
+                                <p class="albumtext">Parallel Universe Shifter</p>
+                                <img class="album" src="parallel.jfif" alt="Parallel Universe Shifter">
+                            </li>
+                            <li>
+                                <p class="albumtext">Fallen Fallen</p>
+                                <img class="album" src="fallen.jfif" alt="Fallen Fallen">
+                            </li>
+                            <li>
+                                <p class="albumtext">Vicious [ANTi] Heroism</p>
+                                <img class="album" src="vicious.jpg" alt="Vicious [ANTi] Heroism">
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="cell small-12 medium-6 large-4">
+                <div class="card rounding artistmusic">
+                    <div class="card-divider">
+                        <h5>Heres a top 5 of your most listened artists</h5>
+                    </div>
+                    <div class="card-section">
+                        <ol>
+                            <li>
+                                <p class="albumtext">Camellia</p>
+                                <img class="album" src="camellia.jpg" alt="Camellia">
+                            </li>
+                            <li>
+                                <p class="albumtext">Laur</p>
+                                <img class="album" src="laur.jfif" alt="Laur">
+                            </li>
+                            <li>
+                                <p class="albumtext">t+pazolite</p>
+                                <img class="album" src="pazolite.jfif" alt="t+pazolite">
+                            </li>
+                            <li>
+                                <p class="albumtext">Kobaryo</p>
+                                <img class="album" src="kobaryo.jfif" alt="Kobaryo">
+                            </li>
+                            <li>
+                                <p class="albumtext">EmoCosine</p>
+                                <img class="album" src="Cosine.jfif" alt="EmoCosine">
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="cell small-12 medium-6 large-4 orb">
+                <div class="clipped-circle-graph" data-clipped-circle-graph data-percent="9">
+                    <div class="clipped-circle-graph-progress">
+                        <div class="clipped-circle-graph-progress-fill"></div>
+                    </div>
+                    <div class="clipped-circle-graph-percents">
+                        <div class="clipped-circle-graph-percents-wrapper">
+                            <span class="clipped-circle-graph-percents-number"></span>
+                            <span class="clipped-circle-graph-percents-units">Of the year was spent playing music</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="contact-panel" id="contact-panel" data-toggler=".is-active">
+        <a class="contact-panel-button" data-toggle="contact-panel">Contact us</a>
+        <form action="">
+          <div class="row">
+            <label>Full name *
+              <input type="text" placeholder="Full name">
+            </label>
+          </div>
+          <div class="row">
+            <label>Email *
+              <input type="email" placeholder="Email address">
+            </label>
+          </div>
+          <div class="row">
+            <label>Message *
+              <textarea placeholder="Describe your needs" rows="3"></textarea>
+            </label>
+          </div>
+          <div class="contact-panel-actions">
+            <button class="cancel-button" data-toggle="contact-panel">Nevermind</button>
+            <input type="submit" class="button submit-button" value="Submit">
+          </div>
+        </form>
+      </div>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/foundation-sites/dist/js/foundation.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="circle.js"></script>
+    <script src="contact.js"></script>
+</body>
+
+</html>

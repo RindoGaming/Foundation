@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/mystyles.css">
+    <link rel="shortcut icon" href="bit_beats_logo_small.png" type="image/x-icon">
+    <title>My Account</title>
+</head>
+<style>
+    
+</style>
+<body class="bgimage">
+    <div class="title-bar topbar-center-logo-mobile" data-responsive-toggle="topbar-center-logo" data-hide-for="medium">
+        <div class="title-bar-left">
+            <div class="title-bar-title"><img class="smaller" src="bit_beats_logo_small.png" alt="logo" /></div>
+        </div>
+        <div class="title-bar-right">
+            <button class="menu-icon" type="button" data-toggle="topbar-center-logo"></button>
+        </div>
+    </div>
+    <div class="top-bar topbar-center-logo" id="topbar-center-logo">
+        <div class="top-bar-left">
+            <ul class="menu vertical medium-horizontal">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="index.html">Dashboard</a></li>
+            </ul>
+        </div>
+        <div class="top-bar-center">
+            <a href="Home.html"><img class="smaller" src="bit_beats_logo_small.png" alt="logo" /></a>
+        </div>
+        <div class="top-bar-right">
+            <ul class="menu vertical medium-horizontal">
+                <li><a href="Settings.html">Settings</a></li>
+                <li><a href="Account.html">My Account</a></li>
+            </ul>
+        </div>
+    </div>
+    <main class="grid-container">
+        <section class="grid-x grid-margin-x">
+            <div class="cell small-12 medium-12 large-12">
+                <div class="card-user-container rounding">
+                    <div class="card-user-avatar">
+                        <img src="pfp.png" alt="Its you :D" class="user-image">
+                    </div>
+                    <div class="card-user-bio">
+                        <h1>V_Riety</h1>
+                        <h6>@JWalters</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="cell small-12 medium-12 large-12">
+                <div class="card-user-container rounding toproom">
+                    <div class="card-user-bio">
+                        <h5>Heya, welcome to my profile :D</h5>
+                        <h5>Here you will see all the stuff I have been listening to.</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="cell small-12 medium-6 large-6">
+                <div class="card rounding artistmusic">
+                    <div class="card-divider">
+                        <h5>Top 5 most played music</h5>
+                    </div>
+                    <div class="card-section">
+                        <ol>
+                            <li>
+                                <p class="albumtext">Sound Chimera</p>
+                                <img class="album" src="soundchimera.jpg" alt="Sound Chimera">
+                            </li>
+                            <li>
+                                <p class="albumtext">シカ色デイズ</p>
+                                <img class="album" src="shikanoko.jpg" alt="シカ色デイズ">
+                            </li>
+                            <li>
+                                <p class="albumtext">Parallel Universe Shifter</p>
+                                <img class="album" src="parallel.jfif" alt="Parallel Universe Shifter">
+                            </li>
+                            <li>
+                                <p class="albumtext">Fallen Fallen</p>
+                                <img class="album" src="fallen.jfif" alt="Fallen Fallen">
+                            </li>
+                            <li>
+                                <p class="albumtext">Vicious [ANTi] Heroism</p>
+                                <img class="album" src="vicious.jpg" alt="Vicious [ANTi] Heroism">
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="cell small-12 medium-6 large-6">
+                <div class="card rounding artistmusic">
+                    <div class="card-divider">
+                        <h5>Top 5 most listened artists</h5>
+                    </div>
+                    <div class="card-section">
+                        <ol>
+                            <li>
+                                <p class="albumtext">Camellia</p>
+                                <img class="album" src="camellia.jpg" alt="Camellia">
+                            </li>
+                            <li>
+                                <p class="albumtext">Laur</p>
+                                <img class="album" src="laur.jfif" alt="Laur">
+                            </li>
+                            <li>
+                                <p class="albumtext">t+pazolite</p>
+                                <img class="album" src="pazolite.jfif" alt="t+pazolite">
+                            </li>
+                            <li>
+                                <p class="albumtext">Kobaryo</p>
+                                <img class="album" src="kobaryo.jfif" alt="Kobaryo">
+                            </li>
+                            <li>
+                                <p class="albumtext">EmoCosine</p>
+                                <img class="album" src="Cosine.jfif" alt="EmoCosine">
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="contact-panel" id="contact-panel" data-toggler=".is-active">
+        <a class="contact-panel-button" data-toggle="contact-panel">Contact us</a>
+        <form action="">
+          <div class="row">
+            <label>Full name *
+              <input type="text" placeholder="Full name">
+            </label>
+          </div>
+          <div class="row">
+            <label>Email *
+              <input type="email" placeholder="Email address">
+            </label>
+          </div>
+          <div class="row">
+            <label>Message *
+              <textarea placeholder="Describe your needs" rows="3"></textarea>
+            </label>
+          </div>
+          <div class="contact-panel-actions">
+            <button class="cancel-button" data-toggle="contact-panel">Nevermind</button>
+            <input type="submit" class="button submit-button" value="Submit">
+          </div>
+        </form>
+      </div>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/foundation-sites/dist/js/foundation.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="circle.js"></script>
+    <script src="contact.js"></script>
+</body>
+
+</html>

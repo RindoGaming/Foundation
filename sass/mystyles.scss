@@ -1,0 +1,500 @@
+@import './_settings';
+@import 'foundation';
+
+@include foundation-everything($prototype: true);
+
+// here you write your own styles
+$topbar-center-logo-bg: rgb(82, 0, 71);
+
+.topbar-center-logo {
+    background: $topbar-center-logo-bg;
+
+    .menu {
+        background: $topbar-center-logo-bg;
+
+        a {
+            color: $white;
+        }
+    }
+}
+
+.topbar-center-logo .top-bar-center {
+    flex: 1 0 auto;
+
+    @include breakpoint(small only) {
+        display: none;
+    }
+}
+
+.topbar-center-logo-mobile {
+    background: $topbar-center-logo-bg;
+
+    .menu-icon {
+        vertical-align: text-top;
+    }
+}
+
+.topbar-center-logo {
+    background: rgb(82, 0, 71);
+}
+
+.topbar-center-logo .menu {
+    background: rgb(82, 0, 71);
+}
+
+.topbar-center-logo .menu a {
+    color: #fefefe;
+}
+
+.topbar-center-logo .top-bar-center {
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+}
+
+@media screen and (max-width: 39.9375em) {
+    .topbar-center-logo .top-bar-center {
+        display: none;
+    }
+}
+
+.topbar-center-logo-mobile {
+    background: rgb(82, 0, 71);
+}
+
+.topbar-center-logo-mobile .menu-icon {
+    vertical-align: text-top;
+}
+
+
+.card-user-container {
+    margin-bottom: 1rem;
+    background-color: #fefefe;
+    color: #0a0a0a;
+    overflow: hidden;
+    padding: 0;
+    border-radius: 0;
+}
+
+.card-user-container .card-user-avatar .user-image {
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    width: 11.875rem;
+    height: 11.875rem;
+    padding: 0.9375rem;
+}
+
+.card-user-container .card-user-avatar .user-image:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.card-user-container .card-user-bio {
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-user-container .card-user-bio .location {
+    display: inline-block;
+    margin: 0 0.9375rem;
+    color: #767676;
+    font-size: 0.875rem;
+}
+
+.card-user-container .card-user-bio .location-icon,
+.card-user-container .card-user-bio .location-text {
+    display: inline-block;
+    padding: 0 0.3125rem;
+}
+
+.card-user-container .card-user-social {
+    background: #e6e6e6;
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-user-container .card-user-social ul {
+    display: inline-block;
+}
+
+.card-user-container .card-user-social ul li {
+    margin: 0 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.card-user-container .card-user-social ul li:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.card-user-container .card-user-button {
+    text-align: center;
+    padding: 1rem;
+}
+
+$bar-graph-height: 425px;
+
+.bar-graph {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    height: $bar-graph-height;
+    margin: 0;
+
+    li {
+        display: block;
+        padding: rem-calc(25) 0;
+        position: relative;
+        text-align: center;
+        border-radius: 4px 4px 0 0;
+        max-width: 20%;
+        height: 100%;
+        margin: 0 1.8% 0 0;
+        flex: 1 1 15%;
+    }
+
+    .bar-graph-axis {
+        flex: 1 1 8%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .bar-graph-label {
+        margin: 0;
+        background-color: none;
+        color: $dark-gray;
+        position: relative;
+
+        @include breakpoint(medium) {
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                border-bottom: 1px dashed $dark-gray;
+                top: 0;
+                left: 0;
+                height: 50%;
+                width: 20%;
+
+                @include breakpoint(large) {
+                    width: 30%;
+                }
+            }
+
+            &:after {
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+
+    .percent {
+        letter-spacing: -3px;
+        opacity: 0.4;
+        width: 100%;
+        font-size: rem-calc(30);
+        position: absolute;
+
+        @include breakpoint(medium) {
+            font-size: rem-calc(62);
+        }
+
+        span {
+            font-size: rem-calc(30);
+        }
+    }
+
+    .description {
+        font-weight: 800;
+        opacity: 0.5;
+        text-transform: uppercase;
+        width: 100%;
+        font-size: 14px;
+        bottom: 20px;
+        position: absolute;
+        font-size: rem-calc(16);
+        overflow: hidden;
+    }
+
+    .bar {
+        @each $name, $color in $foundation-palette {
+            &.#{$name} {
+                border: 1px solid $color;
+                background: linear-gradient(lighten($color, 10%), $color 70%);
+            }
+        }
+    }
+}
+
+.darkbar {
+    color: white;
+}
+
+.hello {
+    width: 75%;
+    height: 75%;
+}
+
+@mixin clipped-circle-graph-circle($size) {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50% - #{$size/2});
+    top: calc(50% - #{$size/2});
+    width: $size;
+    height: $size;
+}
+
+$clipped-circle-graph-size: rem-calc(180);
+$clipped-circle-graph-percent-number-size: rem-calc(24);
+$clipped-circle-graph-percent-unit-size: rem-calc(16);
+$clipped-circle-graph-empty-color: $dark-gray;
+$clipped-circle-background-color: $light-gray;
+$clipped-circle-graph-fill-color: $primary-color;
+$clipped-circle-clip-size: rem-calc(80);
+
+.clipped-circle-graph {
+    margin-top: 20px;
+    margin-left: 100px;
+    width: $clipped-circle-graph-size;
+    height: $clipped-circle-graph-size;
+    border-radius: 50%;
+    background-color: $clipped-circle-graph-empty-color;
+    position: relative;
+
+    &.gt-50 {
+        background-color: $clipped-circle-graph-fill-color;
+    }
+
+    &:after {
+        content: '';
+        @include horizontal-center;
+        bottom: 19px;
+        background: $clipped-circle-background-color;
+        height: $clipped-circle-clip-size;
+        width: $clipped-circle-clip-size;
+        z-index: 3;
+        transform: rotate(45deg) translate3d(0, 0, 0);
+        transform-origin: -30px 15px;
+    }
+}
+
+.clipped-circle-graph-progress {
+    @include clipped-circle-graph-circle($clipped-circle-graph-size);
+    clip: rect(0, $clipped-circle-graph-size, $clipped-circle-graph-size, #{$clipped-circle-graph-size/2});
+    transform: rotate(-180deg) perspective(0);
+
+    .clipped-circle-graph-progress-fill {
+        @include clipped-circle-graph-circle($clipped-circle-graph-size);
+        clip: rect(0, #{$clipped-circle-graph-size/2}, $clipped-circle-graph-size, 0);
+        background: $clipped-circle-graph-fill-color;
+        transform: rotate(60deg);
+    }
+
+    .gt-50 & {
+        clip: rect(0, #{$clipped-circle-graph-size/2}, $clipped-circle-graph-size, 0);
+
+        .clipped-circle-graph-progress-fill {
+            clip: rect(0, $clipped-circle-graph-size, $clipped-circle-graph-size, #{$clipped-circle-graph-size/2});
+            background: $clipped-circle-graph-empty-color;
+        }
+    }
+}
+
+.clipped-circle-graph-percents {
+    @include clipped-circle-graph-circle(#{$clipped-circle-graph-size/1.45});
+    background: $clipped-circle-background-color;
+    text-align: center;
+    display: table;
+    z-index: 4;
+
+    .clipped-circle-graph-percents-number {
+        display: block;
+        font-size: $clipped-circle-graph-percent-number-size;
+        font-weight: bold;
+        color: $clipped-circle-graph-fill-color;
+    }
+
+    .clipped-circle-graph-percents-units {
+        display: block;
+        font-size: $clipped-circle-graph-percent-unit-size;
+        font-weight: bold;
+    }
+}
+
+.clipped-circle-graph-percents-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 0;
+
+    span {
+        line-height: 1;
+    }
+}
+
+.rounding {
+    border-radius: 50px;
+}
+
+.album {
+    display: inline;
+    height: 75px;
+    width: 75px;
+    margin-bottom: 10px;
+}
+
+.albumtext {
+    display: inline;
+    padding-right: 20px;
+}
+
+.artistmusic {
+    margin-top: 50px;
+}
+
+.orb {
+    margin-top: 150px;
+}
+
+.bulletless {
+    list-style-type: none;
+    align-items: center;
+    text-align: center;
+}
+
+textarea {
+    resize: none;
+}
+
+.submit {
+    width: 100px;
+    border-radius: 100px;
+}
+
+.nonexistant {
+    display: none;
+}
+
+.cover {
+    border-radius: 100px;
+}
+
+.bgimage {
+    background-image: url("https://img.freepik.com/premium-vector/seamless-music-notes-marks-background-pattern_8071-17167.jpg");
+}
+
+.bigger {
+    font-size: larger;
+}
+
+.toproom {
+    padding-top: 25px;
+}
+
+$contact-panel-bg: $black;
+$contact-panel-height: 375px;
+$contact-panel-width: 350px;
+$contact-panel-right-offset: 20px;
+$contact-panel-button-arrow: ⥣;
+
+.contact-panel-button {
+    background: $contact-panel-bg;
+    color: $white;
+    width: auto;
+    padding: 0.25rem 1.25rem;
+    text-align: center;
+    position: absolute;
+    top: -30px;
+    right: 20px;
+    transition: background 0.25s ease-in-out;
+
+    &:after {
+        content: "⥣";
+        margin-left: 5px;
+    }
+
+    &:hover {
+        background: lighten($contact-panel-bg, 10%);
+        color: lighten($contact-panel-bg, 90%);
+    }
+}
+
+.is-active .contact-panel-button:after {
+    content: "⥥";
+}
+
+.contact-panel {
+    padding: 1rem;
+    z-index: 1;
+    background: $contact-panel-bg;
+    width: $contact-panel-width;
+    height: $contact-panel-height;
+    position: fixed;
+    bottom: -$contact-panel-height;
+    right: $contact-panel-right-offset;
+    transition: bottom 0.5s ease-in-out;
+
+    label {
+        color: $white;
+        width: 100%;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        background: lighten($contact-panel-bg, 15%);
+        border: $contact-panel-bg;
+        transition: background 0.3s ease-in-out;
+
+        &:focus {
+            background: $white;
+        }
+    }
+
+    .contact-panel-actions {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .submit-button {
+        margin-bottom: 0;
+    }
+
+    .cancel-button {
+        margin-bottom: 0;
+        padding: 0.75rem 1rem;
+        color: $white;
+        transition: background 0.25s ease-in-out;
+
+        &:hover {
+            background: lighten($contact-panel-bg, 10%);
+            color: lighten($contact-panel-bg, 90%);
+        }
+    }
+
+    &.is-active {
+        bottom: 0;
+    }
+
+    @include breakpoint(small only) {
+        width: 100%;
+        right: 0;
+    }
+}
+.setting {
+    display: inline;
+}
+.logout {
+    margin-top: 50px;
+}
+.dinges {
+    margin-top: 25px;
+}
